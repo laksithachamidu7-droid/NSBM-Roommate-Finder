@@ -43,4 +43,7 @@ public class Property {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "owner_id", nullable = false)
     private User owner;
+
+    @Column(name = "archived", nullable = false, columnDefinition = "boolean default false")
+    private boolean archived = false;
 }
