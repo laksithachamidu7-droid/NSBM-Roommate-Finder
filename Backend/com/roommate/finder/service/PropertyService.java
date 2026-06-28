@@ -47,6 +47,7 @@ public class PropertyService {
                 .bedrooms(dto.getBedrooms())
                 .bathrooms(dto.getBathrooms())
                 .images(dto.getImages())
+                .archived(false)
                 .owner(owner)
                 .build();
 
