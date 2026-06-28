@@ -171,6 +171,7 @@ public class PropertyService {
                 .bedrooms(p.getBedrooms())
                 .bathrooms(p.getBathrooms())
                 .images(p.getImages())
+                .archived(p.isArchived())
                 .owner(userService.mapToDto(p.getOwner()))
                 .build();
     }
