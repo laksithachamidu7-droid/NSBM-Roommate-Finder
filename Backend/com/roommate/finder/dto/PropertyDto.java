@@ -38,4 +38,6 @@ public class PropertyDto {
     private String images;
 
     private UserDto owner;
+
+    private boolean archived;
 }
