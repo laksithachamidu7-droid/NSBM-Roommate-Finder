@@ -1,0 +1,186 @@
+{
+  "info": {
+    "_postman_id": "fa04d862-8bd9-498a-b13b-b4ec51c0907c",
+    "name": "NSBM Roommate Finder APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54783900",
+    "_collection_link": "https://go.postman.co/collection/54783900-fa04d862-8bd9-498a-b13b-b4ec51c0907c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "New Request",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{auth_secret_0leg}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Full Furnished Apartment for Rent\",\n  \"description\": \"Spacious apartment with a kitchen and parking space. Highly secured area, perfect for 2-3 students.\",\n  \"address\": \"No 88/2, High Level Road, Homagama\",\n  \"city\": \"Homagama\",\n  \"rent\": 35000.0,\n  \"bedrooms\": 2,\n  \"bathrooms\": 1,\n  \"images\": \"\",\n  \"archived\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/properties/3",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "properties",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "send massages",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0xss}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"receiverId\": 5,\n  \"message\": \"Hello, I am interested in your roommate post!\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/messages",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0xss}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Luxury Room near NSBM Green University\",\n  \"description\": \"Spacious room with all amenities, 5 minutes distance to the campus.\",\n  \"address\": \"No 120, Pitipana, Homagama\",\n  \"city\": \"Homagama\",\n  \"rent\": 18000.0,\n  \"bedrooms\": 1,\n  \"bathrooms\": 1,\n  \"images\": \"\",\n  \"archived\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/properties",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "properties"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{supabase_service_role_api_key_0leg}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/properties/8",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "properties",
+            "8"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "auth_secret_07j3",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0xss",
+      "secret": true
+    },
+    {
+      "key": "json_web_token_0xss",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0732",
+      "secret": true
+    },
+    {
+      "key": "supabase_service_role_api_key_0leg",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0leg",
+      "secret": true
+    }
+  ]
+}
